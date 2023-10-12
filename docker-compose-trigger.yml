@@ -1,0 +1,5 @@
+version: "3.8"
+services:
+  iroha0:
+    build: .
+    image: iroha2:dev
