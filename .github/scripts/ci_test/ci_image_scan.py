@@ -40,6 +40,7 @@ def main():
         if check_docker_config(yml_file):
             warning(f'wrong image in "{yml_file}"')
             sys.exit(1)
+    print('Scan completed successfully')
 
 if __name__ == '__main__':
     main()

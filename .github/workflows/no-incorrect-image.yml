@@ -11,7 +11,7 @@ jobs:
         with:
           python-version: "3.11"
       - uses: actions/checkout@v3
+      - name: Install depenencies
+        run: pip install -r .github/scripts/ci_test/requirements.txt --no-input
       - name: Check containers
-        run: |
-          pip install -r .github/scripts/ci_test/requirements.txt --no-input
-          python .github/scripts/ci_test/ci_image_scan.py
+        run: python .github/scripts/ci_test/ci_image_scan.py
